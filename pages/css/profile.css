@@ -1,0 +1,15 @@
+.profile-header > * {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    
+    vertical-align: top;
+    border-radius: 50%;
+    background-color: #fff;
+    border: #666 1px solid;
+}

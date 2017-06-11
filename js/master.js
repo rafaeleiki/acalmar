@@ -12,7 +12,7 @@ var initApp;
             </header>`);
 
         var menu = $(`
-            <div class="content home-content">
+            <div>
                 <nav class="bar bar-tab">
                     <a class="tab-item active" href="#">
                         <span class="fa fa-handshake-o"></span>
