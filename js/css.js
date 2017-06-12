@@ -1,9 +1,9 @@
 var loadCss;
 
-(function () {
+(function() {
     'use strict';
 
-    loadCss = function () {
+    loadCss = function() {
         var cssFiles = [
             'profile.css'
         ];
