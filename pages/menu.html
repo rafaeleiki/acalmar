@@ -1,0 +1,20 @@
+<div ng-controller="MainController as ctrl">
+    <nav class="bar bar-tab">
+        <a class="tab-item" ng-class="{'active': ctrl.isActive('amparo')}" href="#">
+            <span class="fa fa-handshake-o"></span>
+            <span class="tab-label">Amparo</span>
+        </a>
+        <a class="tab-item" ng-class="{'active': ctrl.isActive('diario')}" href="pages/diario.html" data-transition="fade">
+            <span class="fa fa-pencil"></span>
+            <span class="tab-label">Diário</span>
+        </a>
+        <a class="tab-item" ng-class="{'active': ctrl.isActive('acalmar')}" href="#">
+            <span class="fa fa-leaf"></span>
+            <span class="tab-label">Acalmar</span>
+        </a>
+        <a class="tab-item" ng-class="{'active': ctrl.isActive('assistencia')}" href="#">
+            <span class="fa fa-user-md"></span>
+            <span class="tab-label">Assistência</span>
+        </a>
+    </nav>
+</div>
