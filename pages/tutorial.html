@@ -14,7 +14,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <base href="../" />
+    <base href=".." />
 
     <link rel="stylesheet" href="jquery.mobile.custom/jquery.mobile.custom.structure.min.css">
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -25,34 +25,32 @@
     <link type="text/css" rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
 
     <link rel="stylesheet" href="pages/css/base.css" />
+     <link rel="stylesheet" href="pages/css/tutorial.css" />
 </head>
 
 <body>
-    <div id="master-layout">
-        <header class="bar bar-nav" ng-controller="MainController">
-            <a class="icon fa fa-user-circle icon-left-nav pull-left" href="{{MainController.basePath}}/profile.html"></a>
-            <a class="icon fa fa-gear pull-right"></a>
-            <h1 class="title">Acalmar</h1>
-        </header>
+      <div class="slider tutorialPanel" id="mySlider">
+        <div class="slide-group">
+            <div class="slide">
+                <span class="slide-text">
+                    <span class="icon icon-left-nav"></span>
+                    Slide me
+                </span>
+            </div>
+            <div class="slide">
+           
+            </div>
+            <div class="slide">
+           
+            </div>
+            <div class="slide">
+           
+            </div>
+        </div>
+     </div>
+
         <div>
-            <nav class="bar bar-tab navGradientCustom">
-                <a class="tab-item" href="#">
-                    <span class="fa fa-handshake-o"></span>
-                    <span class="tab-label">Amparo</span>
-                </a>
-                <a class="tab-item" href="pages/diario.html" data-transition="fade">
-                    <span class="fa fa-pencil"></span>
-                    <span class="tab-label">Diário</span>
-                </a>
-                <a class="tab-item" href="pages/acalmar.html">
-                    <span class="fa fa-leaf"></span>
-                    <span class="tab-label">Acalmar</span>
-                </a>
-                <a class="tab-item active" href="pages/assistencia.html">
-                    <span class="fa fa-user-md"></span>
-                    <span class="tab-label">Assistência</span>
-                </a>
-            </nav>
+       
         </div>
     </div>
 </body>
