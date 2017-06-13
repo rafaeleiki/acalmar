@@ -1,0 +1,114 @@
+#diario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    padding: 2% 0;
+}
+
+#diario>a {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+.text-box {
+    width: 100%;
+    height: 200px;
+    background-color: #fefefe;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2%;
+    margin: 2% 5%;
+    width: 90%;
+}
+
+.text-box form {
+    height: 100%;
+}
+
+.text-box .text-options {
+    display: flex;
+    justify-content: space-around;
+    flex: 0.2;
+    max-width: 20%;
+}
+
+.text-box .text-actions {
+    flex: 0.15;
+}
+
+.text-box .icon {
+    outline: none;
+    font-size: 18pt;
+    border: none;
+    background-color: inherit;
+    padding: inherit;
+}
+
+.text-box .icon:active {
+    background-color: white;
+}
+
+.text-box .icon.privacy {
+    color: #666;
+}
+
+.text-box .icon.privacy.locked {
+    color: blue;
+}
+
+.text-box .icon.fa-smile-o {
+    color: green;
+}
+
+.text-box .icon.fa-meh-o {
+    color: darkgoldenrod;
+}
+
+.text-box .icon.fa-frown-o {
+    color: red;
+}
+
+.text-box textarea {
+    outline: none;
+    border: none;
+    flex: 0.8;
+}
+
+.text-box .text-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 0.2;
+}
+
+textarea.no-resize {
+    resize: none;
+}
+
+#textBoxModal .text-box {
+    justify-content: space-between;
+}
+
+#diario .list .media img {
+    height: 50px;
+    width: 50px;
+}
+
+#mood-picker {
+    position: absolute;
+    bottom: 75px;
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+}
+
+#mood-picker.hidden {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
