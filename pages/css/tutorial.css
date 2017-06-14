@@ -1,16 +1,43 @@
 .tutorialPanel {
     background-color: #43C6AC;
 }
-.tutorialBackground{
-    background-color: white;
-    padding-top: 25%;
-}
-.acalmarIcon{
 
+.tutorialBackground {
+    background-color: white;
 }
-h5{
+
+.acalmarIcon {}
+
+h5 {
     text-align: center;
 }
-img { display: block;
+
+img {
+    display: block;
     margin: 0 auto;
+}
+
+.slide img {
+    margin-bottom: 20px;
+}
+
+.slide-text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.slide-btn {
+    background-color: white;
+    border: 1px solid #428bca;
+    padding: 15px;
+    border-radius: 5%;
+}
+
+.slide-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
 }

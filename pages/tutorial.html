@@ -25,58 +25,71 @@
     <link type="text/css" rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
 
     <link rel="stylesheet" href="pages/css/base.css" />
-     <link rel="stylesheet" href="pages/css/tutorial.css" />
+    <script src="js/css.js"></script>
+    <script src="js/tutorial.js"></script>
 </head>
 
-<body>     
-    <div class="slider tutorialBackground content-padded" id="mySlider">
+<body>
+    <div class="slider tutorialBackground" id="mySlider">
         <div class="slide-group">
             <div class="slide">
                 <img src="images/care.png" alt="Icone com mão e coração">
                 <span class="slide-text">
-                    <span class="icon icon-left-nav"></span>
-                Amparo
+                    <span class="icon icon-left-nav"></span> Amparo
                 </span>
-                 <p>
-                    Precisando conversar?Encontre uma mão amiga.
-                </p>
+                <span class="slide-text"><p>
+                    Precisando conversar? Encontre uma mão amiga.
+                </p></span>
             </div>
             <div class="slide">
-                <img src="images/diario.png" alt="Lapis">        
-                <h5>Diário</h5>   
-                <p>Desabafe aqui suas inquietações e ideias.Guarde suas notas ou compartilhe-as com quem quiser.</p>
-                
-            </div>
-            <div class="slide">
-                 <img src="images/acalmar.png" alt="Acalmar">
-                <h5>Acalmar</h5>
-                <div class="content-padded">
-                    <p>Precisando conversar?Encontre uma mão amiga.</p>
-                </div>
-            </div>
-             <div class="slide">
-                  <img src="images/assistencia.png" alt="Enfermeira">
-                <h5> Assistência</h5>
-                <div class="content-padded">
-                <p>Encontre aqui ajuda especializada mais próxima de você.</p> 
-                </div>
-            </div>
+                <img src="images/diario.png" alt="Lapis">
+                <span class="slide-text"><h5>Diário</h5></span>
+                <span class="slide-text">
+                    <p>Desabafe aqui suas inquietações e ideias.</p>
+                </span>
+                <span class="slide-text">
+                    <p>Guarde suas notas ou compartilhe-as com quem quiser.</p>
+                </span>
 
-            <div class="slide"> 
-                <div class="content-padded">
-                     <img src="images/humor.png" alt="Enfermeira">
-                    <h5>Humor</h5>
-                    <p>Como está se sentindo hoje? Feliz? Ou triste?Nos diga com um rostinho!</p>
+            </div>
+            <div class="slide">
+                <img src="images/acalmar.png" alt="Acalmar">
+                <span class="slide-text"><h5>Acalmar</h5></span>
+                <span class="slide-text">
+                    <p>Precisando conversar? Encontre uma mão amiga.</p>
+                </span>
+            </div>
+            <div class="slide">
+                <img src="images/assistencia.png" alt="Enfermeira">
+                <h5> Assistência</h5>
+                <span class="slide-text">
+                    <p>Encontre aqui ajuda especializada mais próxima de você.</p>
+                </span>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <div>
+                        <img src="images/humor.png" alt="Enfermeira">
+                        <span class="slide-text"><h5>Humor</h5></span>
+                        <span class="slide-text">
+                            <p>Como está se sentindo hoje?</p>
+                        </span>
+                        <span class="slide-text">
+                            <p>Feliz? Ou triste?</p>
+                        </span>
+                        <span class="slide-text">
+                            <p>Nos diga com um rostinho!</p>
+                        </span>
+                    </div>
+                    <button class="slide-btn" onclick="comecar()">Desfrutar agora!</button>
                 </div>
             </div>
         </div>
     </div>
 </body>
 <script class="js-custom">
-    initApp('pages', 'Tutorial');
     loadCss();
 </script>
-<script src="js/css.js"></script>
 <script src="js/notification.js"></script>
 <script src="js/ratchet-base.js"></script>
 
