@@ -5,12 +5,15 @@ var loadCss;
 
     loadCss = function () {
         var cssFiles = [
-            'profile.css'
+            'profile.css',
+            'support.css'
         ];
 
-        cssFiles.forEach((fileName) => {
+        cssFiles.forEach(function(fileName) {
             var linkElement = $(`<link rel="stylesheet" href="pages/css/${fileName}" />`);
-            $(document.body).append(linkElement);
+            $(document.head).append(linkElement);
         });
     }
+
+    loadCss();
 })();

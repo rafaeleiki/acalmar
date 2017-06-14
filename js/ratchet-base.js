@@ -25,7 +25,7 @@
             var path = document.location.pathname;
 
             /* Não deixa voltar para a mesma página */
-            if (path == previousState) {
+            if (path === previousState) {
                 if (window.history.length > 0) {
                     window.history.back();
                 }

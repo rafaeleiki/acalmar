@@ -23,13 +23,16 @@
     <script src="ratchet-2.0.2/dist/js/ratchet.min.js"></script>
 
     <link rel="stylesheet" href="pages/css/base.css" />
-    <script src="js/master.js"></script>
     <script src="js/css.js"></script>
 </head>
 
 <body>
-<div id="master-layout" class="content-padded">
-    <span class="header"></span>
+<header class="bar bar-nav navGradientCustom">
+    <a class="icon icon-left-nav pull-left" href="#" onclick="history.back();" data-transition="slide-out"></a>
+    <a class="icon fa fa-gear pull-right"></a>
+    <h1 class="title acalmarTitle">Perfil</h1>
+</header>
+<div id="master-layout" class="content content-padded">
     <div class="profile-header">
         <img src="images/luciano.jpg" class="profile-pic"/>
         <label>Luciano</label>
@@ -49,13 +52,27 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco.</p>
-
-    <span class="menu"></span>
 </div>
-<script class="js-custom">
-    initApp('pages', 'Perfil');
-    loadCss();
-</script>
+<div>
+    <nav class="bar bar-tab">
+        <a class="tab-item active" href="index.html" data-transition="slide-in">
+            <span class="fa fa-handshake-o"></span>
+            <span class="tab-label">Amparo</span>
+        </a>
+        <a class="tab-item" href="pages/diario.html" data-transition="slide-in">
+            <span class="fa fa-pencil"></span>
+            <span class="tab-label">Diário</span>
+        </a>
+        <a class="tab-item" href="pages/acalmar.html" data-transition="slide-in">
+            <span class="fa fa-leaf"></span>
+            <span class="tab-label">Acalmar</span>
+        </a>
+        <a class="tab-item" href="pages/assistencia.html" data-transition="slide-in">
+            <span class="fa fa-user-md"></span>
+            <span class="tab-label">Assistência</span>
+        </a>
+    </nav>
+</div>
 </body>
 
 <script src="js/notification.js"></script>
