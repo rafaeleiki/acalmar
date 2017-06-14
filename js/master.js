@@ -3,7 +3,7 @@ var initApp;
 (function() {
     'use strict';
 
-    initApp = function (basePath, title, tab) {
+    initApp = function(basePath, title, tab) {
         var header = $(`
             <header class="bar bar-nav navGradientCustom">
                 <a class="icon fa fa-user-circle icon-left-nav pull-left" href="${basePath}/profile.html"></a>
