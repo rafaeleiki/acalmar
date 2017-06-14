@@ -1,6 +1,7 @@
+var fechaModal;
+var carregaDiario;
 var pickMood;
 var postaDiario;
-var carregaDiario;
 var toggleCadeado;
 var toggleMoodPicker;
 
@@ -10,6 +11,31 @@ var moodPicker = false;
 
 (function() {
     'use strict';
+
+    fechaModal = function() {
+        $("#fechaModal")[0].click();
+        $("#textBoxModal").removeClass('active');
+        mood = 'smile';
+        cadeado = false;
+        carregaDiario();
+    }
+
+    carregaDiario = function() {
+        var text = localStorage.getItem('texto-diario');
+        if(!text) {
+            return;
+        }
+        var textHtml = $(`<li class="table-view-cell media">
+                        <a class="navigate-right">
+                            <img class="media-object pull-left" src="images/luciano.jpg">
+                            <div class="media-body">
+                                Item 1
+                                <p>${text}</p>
+                            </div>
+                        </a>
+                    </li>`);
+        $('#diario .list ul').html(textHtml);
+    }
 
     pickMood = function(newMood) {
         mood = newMood;
@@ -26,12 +52,9 @@ var moodPicker = false;
         console.log(texto);
         localStorage.setItem('texto-diario', texto);
 
-        $("#fechaModalDiario").click();
+        fechaModal();
     };
 
-    carregaDiario = function() {
-
-    }
 
     toggleCadeado = function() {
         cadeado = !cadeado;

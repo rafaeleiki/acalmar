@@ -1,4 +1,6 @@
+<!DOCTYPE html>
 <html>
+
 <head>
 
     <title>Acalmar</title>
@@ -10,34 +12,35 @@
 
     <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <base href="/acalmar/" />
+    <base href="." />
 
     <link rel="stylesheet" href="jquery.mobile.custom/jquery.mobile.custom.structure.min.css">
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="jquery.mobile.custom/jquery.mobile.custom.min.js"></script>
 
-    <link type="text/css" rel="stylesheet" href="ratchet-2.0.2/dist/css/ratchet.min.css"/>
+    <link type="text/css" rel="stylesheet" href="ratchet-2.0.2/dist/css/ratchet.min.css" />
+    <script src="ratchet-2.0.2/dist/js/ratchet.js"></script>
     <link type="text/css" rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
-    <script src="ratchet-2.0.2/dist/js/ratchet.min.js"></script>
 
     <link rel="stylesheet" href="pages/css/base.css" />
-    <script src="js/master.js"></script>
-    <script src="js/css.js"></script>
+    <link rel="stylesheet" href="pages/css/diario.css" />
+    <link rel="stylesheet" href="pages/css/profile.css" />
+    <link rel="stylesheet" href="pages/css/tutorial.css" />
 </head>
 
 <body>
-<div id="master-layout" class="content-padded">
-    <span class="header"></span>
-    <span class="menu"></span>
-</div>
-<script class="js-custom">
-    initApp('pages', 'Perfil');
-    loadCss();
-</script>
+    <span id="header-placeholder"></span>
+    <span id="menu-placeholder"></span>
 </body>
 
-<script src="js/notification.js"></script>
 <script src="js/ratchet-base.js"></script>
+<script src="js/master.js"></script>
+<script src="js/diario.js"></script>
+<script class="js-custom">
+    initApp('Acalmar');
+</script>
+
 </html>

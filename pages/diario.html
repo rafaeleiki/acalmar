@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -27,80 +28,72 @@
     <link rel="stylesheet" href="pages/css/base.css" />
     <link rel="stylesheet" href="pages/css/diario.css" />
     <link rel="stylesheet" href="pages/css/profile.css" />
+    <link rel="stylesheet" href="pages/css/tutorial.css" />
 </head>
 
 <body>
-    <div id="master-layout">
-        <span class="header"></span>
-        <span class="menu"></span>
-    </div>
-    <div id="diario">
-        <a href="pages/diario.html#textBoxModal">
-            <div class="text-box">
-                <span>Toque para escrever...</span>
-                <div class="text-action"></div>
+    <span class="header bar bar-nav" id="header-placeholder"></span>
+    <span class="menu" id="menu-placeholder"></span>
+    <div class="content">
+        <div id="diario">
+            <h4>Fulano de tal</h4>
+            <img class="profile-pic" src="images/luciano.jpg"/>
+            <div class="profile-actions">
+                <div class="action-button">Escrever</div>
+                <div class="action-button">Gravar</div>
+                <div class="action-button">Mídia</div>
+                <div class="action-button">Música</div>
             </div>
-        </a>
+            <a href="pages/diario.html#textBoxModal">
+                <div class="text-box">
+                    <span>Toque para escrever...</span>
+                    <div class="text-action"></div>
+                </div>
+            </a>
 
-        <div class="list">
-            <ul class="table-view">
-                <li class="table-view-cell media">
-                    <a class="navigate-right">
-                        <img class="media-object pull-left" src="images/luciano.jpg">
-                        <div class="media-body">
-                            Item 1
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="table-view-cell media">
-                    <a class="navigate-right">
-                        <img class="media-object pull-left" src="images/luciano.jpg">
-                        <div class="media-body">
-                            Item 1
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
+            <div class="list">
+                <ul class="table-view">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="textBoxModal" class="modal">
+        <header class="bar bar-nav">
+            <a id="fechaModal" href="pages/diario.html" class="hidden"></a>
+            <button type="button" onclick="fechaModal()" class="icon icon-close pull-right"></button>
+            <h1 class="title">Escreva</h1>
+        </header>
+
+        <div class="content">
+            <form name="diario" class="text-box" method="post">
+                <textarea name="texto-diario" class="no-resize"></textarea>
+                <div class="text-footer">
+                    <div class="text-options">
+                        <button type="button" onclick="toggleMoodPicker()" class="humor icon fa fa-smile-o"></button>
+                        <button type="button" onclick="toggleCadeado()" class="privacy icon fa fa-lock"></button>
+                    </div>
+                    <div class="text-action">
+                        <button type="button" onclick="postaDiario()" class="btn submit-btn">Posta</button>
+                    </div>
+                </div>
+                <div id="mood-picker" class="hidden">
+                    <button type="button" onclick="pickMood('smile')" class="icon fa fa-smile-o"></button>
+                    <button type="button" onclick="pickMood('meh')" class="icon fa fa-meh-o"></button>
+                    <button type="button" onclick="pickMood('frown')" class="icon fa fa-frown-o"></button>
+                </div>
+            </form>
         </div>
     </div>
 </body>
-<div id="textBoxModal" class="modal">
-    <header class="bar bar-nav">
-        <a id="fechaModalDiario" class="icon icon-close pull-right" href="pages/diario.html#textBoxModal"></a>
-        <h1 class="title">Escreva</h1>
-    </header>
-
-    <div class="content">
-        <form name="diario" class="text-box" method="post">
-            <textarea name="texto-diario" class="no-resize"></textarea>
-            <div class="text-footer">
-                <div class="text-options">
-                    <button type="button" onclick="toggleMoodPicker()" class="humor icon fa fa-smile-o"></button>
-                    <button type="button" onclick="toggleCadeado()" class="privacy icon fa fa-lock"></button>
-                </div>
-                <div class="text-action">
-                    <button type="button" onclick="postaDiario()" class="btn submit-btn">Posta</button>
-                </div>
-            </div>
-            <div id="mood-picker" class="hidden">
-                <button type="button" onclick="pickMood('smile')" class="icon fa fa-smile-o"></button>
-                <button type="button" onclick="pickMood('meh')" class="icon fa fa-meh-o"></button>
-                <button type="button" onclick="pickMood('frown')" class="icon fa fa-frown-o"></button>
-            </div>
-        </form>
-
-    </div>
-</div>
 
 
-<script src="js/notification.js"></script>
 <script src="js/ratchet-base.js"></script>
+<script src="js/notification.js"></script>
 <script src="js/master.js"></script>
 <script src="js/diario.js"></script>
 <script class="js-custom">
-    initApp('pages', 'Acalmar', 'diario');
+    initApp('Acalmar', 'diario');
+    carregaDiario();
 </script>
 
 </html>
