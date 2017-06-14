@@ -24,12 +24,12 @@
     <script src="ratchet-2.0.2/dist/js/ratchet.min.js"></script>
     <link type="text/css" rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
 
-    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="pages/css/base.css" />
      <link rel="stylesheet" href="pages/css/tutorial.css" />
 </head>
 
 <body>
- <div id="master-layout">
+<div id="master-layout">
            
         <div class="slider tutorialBackground" id="mySlider">
         <div class="slide-group">
@@ -93,7 +93,10 @@
  </div>
 </div>
 </body>
-
+<script class="js-custom">
+    initApp('pages', 'Tutorial');
+    loadCss();
+</script>
 <script src="js/css.js"></script>
 <script src="js/notification.js"></script>
 <script src="js/ratchet-base.js"></script>
