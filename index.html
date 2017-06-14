@@ -93,7 +93,7 @@
 
 <script class="js-custom">
 
-    function showTab(tabId) {
+    window.showTab = function(tabId) {
         $('.segmented-tab').each(function() {
             const element = $(this);
             if (element.prop('id') === tabId) {
