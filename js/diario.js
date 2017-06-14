@@ -5,8 +5,9 @@ var postaDiario;
 var toggleCadeado;
 var toggleMoodPicker;
 
+var listaDiario = [];
 var cadeado = false;
-var mood = 'smile;'
+var mood = 'smile';
 var moodPicker = false;
 
 (function() {
@@ -21,25 +22,27 @@ var moodPicker = false;
     }
 
     carregaDiario = function() {
-        var text = localStorage.getItem('texto-diario');
-        if(!text) {
+        var listaDiario = $.parseJSON(localStorage.getItem('diario'));
+        if (!listaDiario || !listaDiario.length) {
             return;
         }
-        var textHtml = $(`<li class="table-view-cell media">
+        var textHtml = '';
+        listaDiario.forEach(function(element) {
+            textHtml += `<li class="table-view-cell media">
                         <a class="navigate-right">
-                            <img class="media-object pull-left" src="images/luciano.jpg">
+                            <div class="media-object pull-left fa fa-${element.mood}-o icon"></div>
                             <div class="media-body">
-                                Item 1
-                                <p>${text}</p>
+                                ${element.titulo}
+                                <p>${element.texto}</p>
                             </div>
                         </a>
-                    </li>`);
-        $('#diario .list ul').html(textHtml);
+                    </li>`;
+        }, this);
+        $('#diario .list ul').html($(textHtml));
     }
 
     pickMood = function(newMood) {
         mood = newMood;
-        localStorage.setItem('mood-diario', mood);
         $(".humor.icon").removeClass("fa-smile-o");
         $(".humor.icon").removeClass("fa-meh-o");
         $(".humor.icon").removeClass("fa-frown-o");
@@ -49,8 +52,9 @@ var moodPicker = false;
 
     postaDiario = function() {
         var texto = document.getElementsByName("texto-diario")[0].value;
-        console.log(texto);
-        localStorage.setItem('texto-diario', texto);
+        var titulo = document.getElementsByName("titulo-diario")[0].value;
+        listaDiario.push({ titulo: titulo, texto: texto, mood: mood, privacy: cadeado });
+        localStorage.setItem('diario', JSON.stringify(listaDiario));
 
         fechaModal();
     };

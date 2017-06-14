@@ -113,9 +113,22 @@ textarea.no-resize {
     justify-content: space-between;
 }
 
+#textBoxModal button.icon-close {
+    background: inherit;
+    border: none;
+    margin: 0;
+    padding: 9px 10px;
+}
+
 #diario .list .media img {
     height: 50px;
     width: 50px;
+}
+
+#diario .list .media .icon {
+    font-size: 32pt;
+    margin: 0px;
+    padding: 0 15px 0 0;
 }
 
 #mood-picker {
