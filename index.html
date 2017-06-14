@@ -14,7 +14,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <base href="." />
+    <base href="/acalmar/" />
 
     <link rel="stylesheet" href="jquery.mobile.custom/jquery.mobile.custom.structure.min.css">
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -25,23 +25,109 @@
     <link type="text/css" rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
 
     <link rel="stylesheet" href="pages/css/base.css" />
+    <script src="js/css.js"></script>
 </head>
 
 <body>
+<header class="bar bar-nav navGradientCustom">
+    <a class="icon fa fa-user-circle icon-left-nav pull-left" href="pages/profile.html" data-transition="slide-in"></a>
+    <a class="icon fa fa-gear pull-right"></a>
+    <h1 class="title acalmarTitle">Amparo</h1>
+</header>
+<div id="master-layout" class="content content-padded">
 
-    <div id="master-layout">    
-        <span class="header"></span>
-        
-        <span class="menu"></span>
+    <input type="search">
+    <div class="segmented-control">
+        <a class="control-item active" onclick="showTab('available')">Disponível</a>
+        <a class="control-item" onclick="showTab('messages')">Conversas</a>
+    </div>
+
+    <ul id="available" class="segmented-tab table-view">
+        <li class="table-view-cell media">
+            <a class="navigate-right">
+                <img class="media-object pull-left" src="http://placehold.it/42x42">
+                <div class="media-body">
+                    @cafecomleite
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                    <div class="user-info-container">
+                        <label class="user-info">2km</label>
+                        <label class="user-info">14 <span class="fa fa-heart"></span></label>
+                        <label class="user-info"><span class="fa fa-smile-o"></span></label>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="table-view-cell media">
+            <a class="navigate-right">
+                <img class="media-object pull-left" src="http://placehold.it/42x42">
+                <div class="media-body">
+                    @trinitythetuck
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                    <div class="user-info-container">
+                        <label class="user-info">2km</label>
+                        <label class="user-info">14 <span class="fa fa-heart"></span></label>
+                        <label class="user-info"><span class="fa fa-smile-o"></span></label>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="table-view-cell media">
+            <a class="navigate-right">
+                <img class="media-object pull-left" src="http://placehold.it/42x42">
+                <div class="media-body">
+                    @claroquenao
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                    <div class="user-info-container">
+                        <label class="user-info">2km</label>
+                        <label class="user-info">14 <span class="fa fa-heart"></span></label>
+                        <label class="user-info"><span class="fa fa-smile-o"></span></label>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+    <div id="messages" class="segmented-tab">
 
     </div>
+
+<script class="js-custom">
+
+    window.showTab = function(tabId) {
+        $('.segmented-tab').each(function() {
+            const element = $(this);
+            if (element.prop('id') === tabId) {
+                element.show();
+            } else {
+                element.hide();
+            }
+        });
+    }
+</script>
+
+</div>
+<div>
+    <nav class="bar bar-tab">
+        <a class="tab-item active" href="index.html" data-transition="slide-in">
+            <span class="fa fa-handshake-o"></span>
+            <span class="tab-label">Amparo</span>
+        </a>
+        <a class="tab-item" href="pages/diario.html" data-transition="slide-in">
+            <span class="fa fa-pencil"></span>
+            <span class="tab-label">Diário</span>
+        </a>
+        <a class="tab-item" href="pages/acalmar.html" data-transition="slide-in">
+            <span class="fa fa-leaf"></span>
+            <span class="tab-label">Acalmar</span>
+        </a>
+        <a class="tab-item" href="pages/assistencia.html" data-transition="slide-in">
+            <span class="fa fa-user-md"></span>
+            <span class="tab-label">Assistência</span>
+        </a>
+    </nav>
+</div>
 </body>
 
-<script src="js/css.js"></script>
 <script src="js/notification.js"></script>
 <script src="js/ratchet-base.js"></script>
-<script src="js/master.js"></script>
- <script>
-     initApp('pages', 'Acalmar', 'amparo');
- </script>
 </html>
