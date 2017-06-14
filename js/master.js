@@ -3,7 +3,7 @@ var initApp;
 (function() {
     'use strict';
 
-    initApp = function (title, tab) {
+    initApp = function(title, tab) {
         var header = $(`
             <header class="bar bar-nav navGradientCustom">
                 <a class="icon fa fa-user-circle icon-left-nav pull-left" href="pages/profile.html"></a>
@@ -14,7 +14,7 @@ var initApp;
         var menu = $(`
             <div>
                 <nav class="bar bar-tab">
-                    <a class="tab-item ${tab === 'amparo' ? 'active' : ''}" href="index.html" data-transition="slide-in">
+                    <a class="tab-item ${tab === 'amparo' ? 'active' : undefined}" href="index.html" data-transition="slide-in">
                         <span class="fa fa-handshake-o"></span>
                         <span class="tab-label">Amparo</span>
                     </a>

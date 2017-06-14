@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -21,7 +22,7 @@
     <script src="jquery.mobile.custom/jquery.mobile.custom.min.js"></script>
 
     <link type="text/css" rel="stylesheet" href="ratchet-2.0.2/dist/css/ratchet.min.css" />
-    <script src="ratchet-2.0.2/dist/js/ratchet.min.js"></script>
+    <script src="ratchet-2.0.2/dist/js/ratchet.js"></script>
     <link type="text/css" rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
 
     <link rel="stylesheet" href="pages/css/base.css" />
@@ -29,105 +30,187 @@
 </head>
 
 <body>
-<header class="bar bar-nav navGradientCustom">
-    <a class="icon fa fa-user-circle icon-left-nav pull-left" href="pages/profile.html" data-transition="slide-in"></a>
-    <a class="icon fa fa-gear pull-right"></a>
-    <h1 class="title acalmarTitle">Amparo</h1>
-</header>
-<div id="master-layout" class="content content-padded">
+    <header class="bar bar-nav navGradientCustom">
+        <a class="icon fa fa-user-circle icon-left-nav pull-left" href="pages/profile.html" data-transition="slide-in"></a>
+        <a class="icon fa fa-gear pull-right"></a>
+        <h1 class="title acalmarTitle">Amparo</h1>
+    </header>
+    <div id="master-layout" class="content content-padded">
 
-    <input type="search">
-    <div class="segmented-control">
-        <a class="control-item active" onclick="showTab('available')">Disponível</a>
-        <a class="control-item" onclick="showTab('messages')">Conversas</a>
-    </div>
+        <input type="search">
+        <div class="segmented-control">
+            <a class="control-item active" onclick="showTab('available')">Disponível</a>
+            <a class="control-item" onclick="showTab('messages')">Conversas</a>
+        </div>
 
-    <ul id="available" class="segmented-tab table-view">
-        <li class="table-view-cell media">
-            <a class="navigate-right">
-                <img class="media-object pull-left" src="http://placehold.it/42x42">
-                <div class="media-body">
-                    @cafecomleite
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
-                    <div class="user-info-container">
-                        <label class="user-info">2km</label>
-                        <label class="user-info">14 <span class="fa fa-heart"></span></label>
-                        <label class="user-info"><span class="fa fa-smile-o"></span></label>
+        <ul id="available" class="segmented-tab table-view">
+            <li class="table-view-cell media">
+                <a class="navigate-right">
+                    <img class="media-object pull-left" src="http://placehold.it/42x42">
+                    <div class="media-body">
+                        @cafecomleite
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                        <div class="user-info-container">
+                            <label class="user-info">2km</label>
+                            <label class="user-info">14 <span class="fa fa-heart"></span></label>
+                            <label class="user-info"><span class="fa fa-smile-o"></span></label>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </li>
-        <li class="table-view-cell media">
-            <a class="navigate-right">
-                <img class="media-object pull-left" src="http://placehold.it/42x42">
-                <div class="media-body">
-                    @trinitythetuck
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
-                    <div class="user-info-container">
-                        <label class="user-info">2km</label>
-                        <label class="user-info">14 <span class="fa fa-heart"></span></label>
-                        <label class="user-info"><span class="fa fa-smile-o"></span></label>
+                </a>
+            </li>
+            <li class="table-view-cell media">
+                <a class="navigate-right">
+                    <img class="media-object pull-left" src="http://placehold.it/42x42">
+                    <div class="media-body">
+                        @trinitythetuck
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                        <div class="user-info-container">
+                            <label class="user-info">2km</label>
+                            <label class="user-info">14 <span class="fa fa-heart"></span></label>
+                            <label class="user-info"><span class="fa fa-smile-o"></span></label>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </li>
-        <li class="table-view-cell media">
-            <a class="navigate-right">
-                <img class="media-object pull-left" src="http://placehold.it/42x42">
-                <div class="media-body">
-                    @claroquenao
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
-                    <div class="user-info-container">
-                        <label class="user-info">2km</label>
-                        <label class="user-info">14 <span class="fa fa-heart"></span></label>
-                        <label class="user-info"><span class="fa fa-smile-o"></span></label>
+                </a>
+            </li>
+            <li class="table-view-cell media">
+                <a class="navigate-right">
+                    <img class="media-object pull-left" src="http://placehold.it/42x42">
+                    <div class="media-body">
+                        @claroquenao
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                        <div class="user-info-container">
+                            <label class="user-info">2km</label>
+                            <label class="user-info">14 <span class="fa fa-heart"></span></label>
+                            <label class="user-info"><span class="fa fa-smile-o"></span></label>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </li>
-    </ul>
+                </a>
+            </li>
+        </ul>
 
-    <div id="messages" class="segmented-tab">
+        <div id="messages" class="segmented-tab">
 
-    </div>
+            <ul id="available" class="segmented-tab table-view">
+                <li class="table-view-cell media">
+                    <a class="navigate-right">
+                        <img class="media-object pull-left" src="http://placehold.it/42x42">
+                        <div class="media-body">
+                            @cafecomleite
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                            <div class="user-info-container">
+                                <label class="user-info">2km</label>
+                                <label class="user-info">14 <span class="fa fa-heart"></span></label>
+                                <label class="user-info"><span class="fa fa-smile-o"></span></label>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="table-view-cell media">
+                    <a class="navigate-right">
+                        <img class="media-object pull-left" src="http://placehold.it/42x42">
+                        <div class="media-body">
+                            @trinitythetuck
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                            <div class="user-info-container">
+                                <label class="user-info">2km</label>
+                                <label class="user-info">14 <span class="fa fa-heart"></span></label>
+                                <label class="user-info"><span class="fa fa-smile-o"></span></label>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="table-view-cell media">
+                    <a class="navigate-right">
+                        <img class="media-object pull-left" src="http://placehold.it/42x42">
+                        <div class="media-body">
+                            @claroquenao
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                            <div class="user-info-container">
+                                <label class="user-info">2km</label>
+                                <label class="user-info">14 <span class="fa fa-heart"></span></label>
+                                <label class="user-info"><span class="fa fa-smile-o"></span></label>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
 
-<script class="js-custom">
+            <div id="messages" class="segmented-tab">
 
-    window.showTab = function(tabId) {
-        $('.segmented-tab').each(function() {
-            const element = $(this);
-            if (element.prop('id') === tabId) {
-                element.show();
-            } else {
-                element.hide();
+            </div>
+
+            <script class="js-custom">
+                window.showTab = function(tabId) {
+                    $('.segmented-tab').each(function() {
+                        const element = $(this);
+                        if (element.prop('id') === tabId) {
+                            element.show();
+                        } else {
+                            element.hide();
+                        }
+                    });
+                }
+            </script>
+
+        </div>
+        <div>
+            <nav class="bar bar-tab">
+                <a class="tab-item active" href="index.html" data-transition="slide-in">
+                    <span class="fa fa-handshake-o"></span>
+                    <span class="tab-label">Amparo</span>
+                </a>
+                <a class="tab-item" href="pages/diario.html" data-transition="slide-in">
+                    <span class="fa fa-pencil"></span>
+                    <span class="tab-label">Diário</span>
+                </a>
+                <a class="tab-item" href="pages/acalmar.html" data-transition="slide-in">
+                    <span class="fa fa-leaf"></span>
+                    <span class="tab-label">Acalmar</span>
+                </a>
+                <a class="tab-item" href="pages/assistencia.html" data-transition="slide-in">
+                    <span class="fa fa-user-md"></span>
+                    <span class="tab-label">Assistência</span>
+                </a>
+            </nav>
+        </div>
+
+        <script class="js-custom">
+            window.showTab = function(tabId) {
+                $('.segmented-tab').each(function() {
+                    const element = $(this);
+                    if (element.prop('id') === tabId) {
+                        element.show();
+                    } else {
+                        element.hide();
+                    }
+                });
             }
-        });
-    }
-</script>
+        </script>
 
-</div>
-<div>
-    <nav class="bar bar-tab">
-        <a class="tab-item active" href="index.html" data-transition="slide-in">
-            <span class="fa fa-handshake-o"></span>
-            <span class="tab-label">Amparo</span>
-        </a>
-        <a class="tab-item" href="pages/diario.html" data-transition="slide-in">
-            <span class="fa fa-pencil"></span>
-            <span class="tab-label">Diário</span>
-        </a>
-        <a class="tab-item" href="pages/acalmar.html" data-transition="slide-in">
-            <span class="fa fa-leaf"></span>
-            <span class="tab-label">Acalmar</span>
-        </a>
-        <a class="tab-item" href="pages/assistencia.html" data-transition="slide-in">
-            <span class="fa fa-user-md"></span>
-            <span class="tab-label">Assistência</span>
-        </a>
-    </nav>
-</div>
+    </div>
+    <div>
+        <nav class="bar bar-tab">
+            <a class="tab-item active" href="index.html" data-transition="slide-in">
+                <span class="fa fa-handshake-o"></span>
+                <span class="tab-label">Amparo</span>
+            </a>
+            <a class="tab-item" href="pages/diario.html" data-transition="slide-in">
+                <span class="fa fa-pencil"></span>
+                <span class="tab-label">Diário</span>
+            </a>
+            <a class="tab-item" href="pages/acalmar.html" data-transition="slide-in">
+                <span class="fa fa-leaf"></span>
+                <span class="tab-label">Acalmar</span>
+            </a>
+            <a class="tab-item" href="pages/assistencia.html" data-transition="slide-in">
+                <span class="fa fa-user-md"></span>
+                <span class="tab-label">Assistência</span>
+            </a>
+        </nav>
+    </div>
 </body>
 
 <script src="js/notification.js"></script>
 <script src="js/ratchet-base.js"></script>
+
 </html>

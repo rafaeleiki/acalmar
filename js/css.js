@@ -1,12 +1,14 @@
 var loadCss;
 
-(function () {
+(function() {
     'use strict';
 
-    loadCss = function () {
+    loadCss = function() {
         var cssFiles = [
             'profile.css',
-            'support.css'
+            'support.css',
+            'diario.css',
+            'tutorial.css'
         ];
 
         cssFiles.forEach(function(fileName) {
