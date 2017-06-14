@@ -28,6 +28,7 @@
     <script src="js/master.js"></script>
     <script src="js/css.js"></script>
     <script src="js/diario.js"></script>
+    <script src="js/tutorial.js"></script>
 </head>
 
 <body>
@@ -36,7 +37,7 @@
         <a class="icon fa fa-gear pull-right"></a>
         <h1 class="title acalmarTitle">Diário</h1>
     </header>
-    <div id="master-layout" class="content content-padded">
+    <div id="master-layout" class="content">
         <div id="diario">
             <h4>Fulano de tal</h4>
             <img class="profile-pic" src="images/luciano.jpg" />
@@ -58,33 +59,33 @@
                 </ul>
             </div>
         </div>
-    </div>
-    <div id="textBoxModal" class="modal">
-        <header class="bar bar-nav">
-            <a id="fechaModal" href="pages/diario.html" class="hidden"></a>
-            <button type="button" onclick="fechaModal()" class="icon icon-close pull-right"></button>
-            <h1 class="title acalmarTitle">Escreva</h1>
-        </header>
+        <div id="textBoxModal" class="modal">
+            <header class="bar bar-nav">
+                <a id="fechaModal" href="pages/diario.html" class="hidden"></a>
+                <button type="button" onclick="fechaModal()" class="icon icon-close pull-right"></button>
+                <h1 class="title acalmarTitle">Escreva</h1>
+            </header>
 
-        <div class="content">
-            <form name="diario" class="text-box" method="post">
-                <input type="text" name="titulo-diario" placeholder="Titulo do seu texto" />
-                <textarea name="texto-diario" class="no-resize"></textarea>
-                <div class="text-footer">
-                    <div class="text-options">
-                        <button type="button" onclick="toggleMoodPicker()" class="humor icon fa fa-smile-o"></button>
-                        <button type="button" onclick="toggleCadeado()" class="privacy icon fa fa-lock"></button>
+            <div class="content">
+                <form name="diario" class="text-box" method="post">
+                    <input type="text" name="titulo-diario" placeholder="Titulo do seu texto" />
+                    <textarea name="texto-diario" class="no-resize"></textarea>
+                    <div class="text-footer">
+                        <div class="text-options">
+                            <button type="button" onclick="toggleMoodPicker()" class="humor icon fa fa-smile-o"></button>
+                            <button type="button" onclick="toggleCadeado()" class="privacy icon fa fa-lock"></button>
+                        </div>
+                        <div class="text-action">
+                            <button type="button" onclick="postaDiario()" class="btn submit-btn">Posta</button>
+                        </div>
                     </div>
-                    <div class="text-action">
-                        <button type="button" onclick="postaDiario()" class="btn submit-btn">Posta</button>
+                    <div id="mood-picker" class="hidden">
+                        <button type="button" onclick="pickMood('smile')" class="icon fa fa-smile-o"></button>
+                        <button type="button" onclick="pickMood('meh')" class="icon fa fa-meh-o"></button>
+                        <button type="button" onclick="pickMood('frown')" class="icon fa fa-frown-o"></button>
                     </div>
-                </div>
-                <div id="mood-picker" class="hidden">
-                    <button type="button" onclick="pickMood('smile')" class="icon fa fa-smile-o"></button>
-                    <button type="button" onclick="pickMood('meh')" class="icon fa fa-meh-o"></button>
-                    <button type="button" onclick="pickMood('frown')" class="icon fa fa-frown-o"></button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
     <div>
