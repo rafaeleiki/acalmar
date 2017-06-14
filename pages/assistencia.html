@@ -33,7 +33,7 @@
     <h1 class="title acalmarTitle">Amparo</h1>
 </header>
 <div id="master-layout" class="content content-padded">
-    <input type="search" placeholder="Clínica, especialista...">
+    <input type="search" placeholder="Clínica, especialista..." onkeyup="updateMap(event);">
     <iframe id="map"
             frameborder="0"
             style="border:0"
@@ -46,6 +46,13 @@
         const CONTENT_PADDING = 10;
         map.width(window.innerWidth - 2 * CONTENT_PADDING);
         map.height(window.innerHeight);
+
+        window.updateMap = function(event) {
+            const query = event.target.value || 'clinicas barao geraldo, campinas';
+            const finalQuery = query.replace(/\ /g, '+');
+            document.getElementById('map').src =
+                `https://www.google.com/maps/embed/v1/place?q=${finalQuery}&key=AIzaSyABjESM3QMEnhtFw-fCwziPNJqrvcVwVgE`;
+        }
     </script>
 </div>
 <div>
