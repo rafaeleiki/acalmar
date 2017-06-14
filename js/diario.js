@@ -56,6 +56,9 @@ var moodPicker = false;
         listaDiario.push({ titulo: titulo, texto: texto, mood: mood, privacy: cadeado });
         localStorage.setItem('diario', JSON.stringify(listaDiario));
 
+        document.getElementsByName("texto-diario")[0].value = '';
+        document.getElementsByName("titulo-diario")[0].value = '';
+
         fechaModal();
     };
 

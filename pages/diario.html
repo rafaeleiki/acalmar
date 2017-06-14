@@ -32,85 +32,80 @@
 </head>
 
 <body>
-<header class="bar bar-nav navGradientCustom">
-    <a class="icon fa fa-user-circle icon-left-nav pull-left" href="pages/profile.html" data-transition="slide-in"></a>
-    <a class="icon fa fa-gear pull-right"></a>
-    <h1 class="title acalmarTitle">Diário</h1>
-</header>
-<div id="master-layout" class="content">
-    <div id="diario">
-        <h4>Fulano de tal</h4>
-        <img class="profile-pic" src="images/luciano.jpg" />
-        <!--<div class="profile-actions">
+    <header class="bar bar-nav navGradientCustom">
+        <a class="icon fa fa-user-circle icon-left-nav pull-left" href="pages/profile.html" data-transition="slide-in"></a>
+        <a class="icon fa fa-gear pull-right"></a>
+        <h1 class="title acalmarTitle">Diário</h1>
+    </header>
+    <div id="master-layout" class="content">
+        <div id="diario">
+            <h4>Fulano de tal</h4>
+            <img class="profile-pic" src="images/luciano.jpg" />
+            <!--<div class="profile-actions">
             <div class="action-button">Escrever</div>
             <div class="action-button">Gravar</div>
             <div class="action-button">Mídia</div>
             <div class="action-button">Música</div>
         </div>-->
-        <a href="pages/diario.html#textBoxModal">
-            <div class="text-box">
-                <span>Toque para escrever...</span>
-                <div class="text-action"></div>
+            <a href="pages/diario.html#textBoxModal">
+                <div class="text-box">
+                    <span>Toque para escrever...</span>
+                    <div class="text-action"></div>
+                </div>
+            </a>
+
+            <div class="list">
+                <ul class="table-view">
+                </ul>
             </div>
-        </a>
+            <div id="textBoxModal" class="modal">
+                <header class="bar bar-nav">
+                    <a id="fechaModal" href="pages/diario.html" class="hidden"></a>
+                    <button type="button" onclick="fechaModal()" class="icon icon-close pull-right"></button>
+                    <h1 class="title acalmarTitle">Escreva</h1>
+                </header>
 
-        <div class="list">
-            <ul class="table-view">
-            </ul>
-        </div>
-
-        <div class="list">
-            <ul class="table-view">
-            </ul>
-        </div>
-        <div id="textBoxModal" class="modal">
-            <header class="bar bar-nav">
-                <a id="fechaModal" href="pages/diario.html" class="hidden"></a>
-                <button type="button" onclick="fechaModal()" class="icon icon-close pull-right"></button>
-                <h1 class="title acalmarTitle">Escreva</h1>
-            </header>
-
-            <div class="content">
-                <form name="diario" class="text-box" method="post">
-                    <input type="text" name="titulo-diario" placeholder="Titulo do seu texto" />
-                    <textarea name="texto-diario" class="no-resize"></textarea>
-                    <div class="text-footer">
-                        <div class="text-options">
-                            <button type="button" onclick="toggleMoodPicker()" class="humor icon fa fa-smile-o"></button>
-                            <button type="button" onclick="toggleCadeado()" class="privacy icon fa fa-lock"></button>
+                <div class="content">
+                    <form name="diario" class="text-box" method="post">
+                        <input type="text" name="titulo-diario" placeholder="Titulo do seu texto" />
+                        <textarea name="texto-diario" class="no-resize"></textarea>
+                        <div class="text-footer">
+                            <div class="text-options">
+                                <button type="button" onclick="toggleMoodPicker()" class="humor icon fa fa-smile-o"></button>
+                                <button type="button" onclick="toggleCadeado()" class="privacy icon fa fa-lock"></button>
+                            </div>
+                            <div class="text-action">
+                                <button type="button" onclick="postaDiario()" class="btn submit-btn">Posta</button>
+                            </div>
                         </div>
-                        <div class="text-action">
-                            <button type="button" onclick="postaDiario()" class="btn submit-btn">Posta</button>
+                        <div id="mood-picker" class="hidden">
+                            <button type="button" onclick="pickMood('smile')" class="icon fa fa-smile-o"></button>
+                            <button type="button" onclick="pickMood('meh')" class="icon fa fa-meh-o"></button>
+                            <button type="button" onclick="pickMood('frown')" class="icon fa fa-frown-o"></button>
                         </div>
-                    </div>
-                    <div id="mood-picker" class="hidden">
-                        <button type="button" onclick="pickMood('smile')" class="icon fa fa-smile-o"></button>
-                        <button type="button" onclick="pickMood('meh')" class="icon fa fa-meh-o"></button>
-                        <button type="button" onclick="pickMood('frown')" class="icon fa fa-frown-o"></button>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<nav class="bar bar-tab">
-    <a class="tab-item" href="index.html" data-transition="slide-out">
-        <span class="fa fa-handshake-o"></span>
-        <span class="tab-label">Amparo</span>
-    </a>
-    <a class="tab-item active">
-        <span class="fa fa-pencil"></span>
-        <span class="tab-label">Diário</span>
-    </a>
-    <a class="tab-item" href="pages/acalmar.html" data-transition="slide-in">
-        <span class="fa fa-leaf"></span>
-        <span class="tab-label">Acalmar</span>
-    </a>
-    <a class="tab-item" href="pages/assistencia.html" data-transition="slide-in">
-        <span class="fa fa-user-md"></span>
-        <span class="tab-label">Assistência</span>
-    </a>
-</nav>
+    <nav class="bar bar-tab">
+        <a class="tab-item" href="index.html" data-transition="slide-out">
+            <span class="fa fa-handshake-o"></span>
+            <span class="tab-label">Amparo</span>
+        </a>
+        <a class="tab-item active">
+            <span class="fa fa-pencil"></span>
+            <span class="tab-label">Diário</span>
+        </a>
+        <a class="tab-item" href="pages/acalmar.html" data-transition="slide-in">
+            <span class="fa fa-leaf"></span>
+            <span class="tab-label">Acalmar</span>
+        </a>
+        <a class="tab-item" href="pages/assistencia.html" data-transition="slide-in">
+            <span class="fa fa-user-md"></span>
+            <span class="tab-label">Assistência</span>
+        </a>
+    </nav>
 </body>
 
 <script src="js/notification.js"></script>
