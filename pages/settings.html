@@ -34,15 +34,19 @@
 <body>
 
 <header class="bar bar-nav navGradientCustom">
-    <a class="icon fa fa-user-circle icon-left-nav pull-left" href="pages/profile.html" data-transition="slide-in"></a>
-    <a class="icon fa fa-gear pull-right" href="pages/settings.html" data-transition="slide-in"></a>
-    <h1 class="title acalmarTitle">Acalmar</h1>
+    <a class="icon icon-left-nav pull-left" href="#" onclick="history.back();"></a>
+    <h1 class="title acalmarTitle">Configurações</h1>
 </header>
 <div id="master-layout" class="content content-padded">
-    <button class="btn btn-block" onclick="window.location.href='pages/respiracao.html'">Respiração</button>
-    <button class="btn btn-primary btn-block">Meditação</button>
-    <button class="btn btn-positive btn-block">Inspire-se</button>
-    <button class="btn btn-negative btn-block">Relaxamento</button>
+    <button class="btn btn-block" onclick="logout()">Sair</button>
+
+    <script class="js-custom">
+        window.logout = function () {
+            window.localStorage.removeItem('user-name');
+            delete window.user;
+            PUSH({ url: 'pages/login.html' });
+        }
+    </script>
 </div>
 <div>
     <nav class="bar bar-tab">
