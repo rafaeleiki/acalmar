@@ -73,6 +73,7 @@ h4 {
 
 .text-box .icon.privacy {
     color: #666;
+    margin: 0 0.25em 0 0.5em;
 }
 
 .text-box .icon.privacy.locked {

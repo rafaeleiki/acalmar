@@ -39,8 +39,10 @@
     </header>
     <div id="master-layout" class="content">
         <div id="diario">
-            <h4>Fulano de tal</h4>
-            <img class="profile-pic" src="images/luciano.jpg" />
+            <h4>Luciano</h4>
+            <a href="pages/profile.html" data-transition="slide-in">
+                <img class="profile-pic" src="images/luciano.jpg" />
+            </a>
             <!--<div class="profile-actions">
             <div class="action-button">Escrever</div>
             <div class="action-button">Gravar</div>
@@ -72,7 +74,9 @@
                         <div class="text-footer">
                             <div class="text-options">
                                 <button type="button" onclick="toggleMoodPicker()" class="humor icon fa fa-smile-o"></button>
-                                <button type="button" onclick="toggleCadeado()" class="privacy icon fa fa-lock"></button>
+                                <button type="button" onclick="toggleCadeado()" class="privacy icon fa fa-lock locked"></button>
+                                <label name="privacy" data-private="false" style="display: none;">Público</label>
+                                <label name="privacy" data-private="true">Privado</label>
                             </div>
                             <div class="text-action">
                                 <button type="button" onclick="postaDiario()" class="btn submit-btn">Posta</button>

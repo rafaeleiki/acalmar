@@ -6,7 +6,7 @@ var toggleCadeado;
 var toggleMoodPicker;
 
 var listaDiario = [];
-var cadeado = false;
+var cadeado = true;
 var mood = 'smile';
 var moodPicker = false;
 
@@ -70,6 +70,13 @@ var moodPicker = false;
         } else {
             $("button.privacy.icon").removeClass("locked");
         }
+        $('[name=privacy]').each(function () {
+            if ($(this).data('private') === cadeado) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
     }
 
     toggleMoodPicker = function() {
