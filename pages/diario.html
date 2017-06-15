@@ -34,13 +34,15 @@
 <body>
     <header class="bar bar-nav navGradientCustom">
         <a class="icon fa fa-user-circle icon-left-nav pull-left" href="pages/profile.html" data-transition="slide-in"></a>
-        <a class="icon fa fa-gear pull-right"></a>
+        <a class="icon fa fa-gear pull-right" href="pages/settings.html" data-transition="slide-in"></a>
         <h1 class="title acalmarTitle">Diário</h1>
     </header>
     <div id="master-layout" class="content">
         <div id="diario">
-            <h4>Fulano de tal</h4>
-            <img class="profile-pic" src="images/luciano.jpg" />
+            <h4 id="username"></h4>
+            <a href="pages/profile.html" data-transition="slide-in">
+                <img class="profile-pic" src="images/luciano.jpg" />
+            </a>
             <!--<div class="profile-actions">
             <div class="action-button">Escrever</div>
             <div class="action-button">Gravar</div>
@@ -72,7 +74,9 @@
                         <div class="text-footer">
                             <div class="text-options">
                                 <button type="button" onclick="toggleMoodPicker()" class="humor icon fa fa-smile-o"></button>
-                                <button type="button" onclick="toggleCadeado()" class="privacy icon fa fa-lock"></button>
+                                <button type="button" onclick="toggleCadeado()" class="privacy icon fa fa-lock locked"></button>
+                                <label name="privacy" data-private="false" style="display: none;">Público</label>
+                                <label name="privacy" data-private="true">Privado</label>
                             </div>
                             <div class="text-action">
                                 <button type="button" onclick="postaDiario()" class="btn submit-btn">Posta</button>
@@ -87,6 +91,10 @@
                 </div>
             </div>
         </div>
+
+        <script class="js-custom">
+            document.getElementById('username').innerText = '@' + window.user.name;
+        </script>
     </div>
     <nav class="bar bar-tab">
         <a class="tab-item" href="index.html" data-transition="slide-out">

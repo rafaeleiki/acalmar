@@ -33,14 +33,14 @@
 
 <body>
     <header class="bar bar-nav navGradientCustom">
-        <a class="icon icon-left-nav pull-left" href="#" onclick="history.back();" data-transition="slide-out"></a>
-        <a class="icon fa fa-gear pull-right"></a>
+        <a class="icon icon-left-nav pull-left" href="#" onclick="history.back();"></a>
+        <a class="icon fa fa-gear pull-right" href="pages/settings.html" data-transition="slide-in"></a>
         <h1 class="title acalmarTitle">Perfil</h1>
     </header>
     <div id="master-layout" class="content content-padded">
         <div class="profile-header">
             <img src="images/luciano.jpg" class="profile-pic" />
-            <label>Luciano</label>
+            <label id="username"></label>
         </div>
 
         <h6>Sobre mim</h6>
@@ -51,6 +51,9 @@
 
         <h6>Meus desabafos</h6>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        <script class="js-custom">
+            document.getElementById('username').innerText = '@' + window.user.name;
+        </script>
     </div>
     <div>
         <nav class="bar bar-tab">
