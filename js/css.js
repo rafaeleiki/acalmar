@@ -8,7 +8,8 @@ var loadCss;
             'profile.css',
             'support.css',
             'diario.css',
-            'tutorial.css'
+            'tutorial.css',
+            'calm.css'
         ];
 
         cssFiles.forEach(function(fileName) {
