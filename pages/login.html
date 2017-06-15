@@ -37,13 +37,21 @@
         <h5>Acalmar</h5>
         <span>Acalme-se.Você não está sozinho.</span>
 
-        <input type="text" placeholder="Usuário">
+        <input type="text" id="username" placeholder="Usuário">
         <input type="text" placeholder="Senha">
         <span><a href="url">Esqueceu a senha?</a></span>
-        <a class="btn btn-positive btn-block" href="pages/tutorial.html">Login</a>
+        <a class="btn btn-positive btn-block" onclick="login();">Login</a>
         <a class="btn btn-positive btn-block" href="pages/cadastro.html">Cadastrar</a>
 
         <script class="js-custom">
+            if (window.user) {
+                PUSH({ url: 'pages/tutorial.html' })
+            }
+
+            window.login = function () {
+                window.localStorage.setItem('user-name', $('#username')[0].value);
+                PUSH({ url: 'pages/tutorial.html' });
+            }
         </script>
     </div>
 </body>

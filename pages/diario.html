@@ -39,7 +39,7 @@
     </header>
     <div id="master-layout" class="content">
         <div id="diario">
-            <h4>Luciano</h4>
+            <h4 id="username"></h4>
             <a href="pages/profile.html" data-transition="slide-in">
                 <img class="profile-pic" src="images/luciano.jpg" />
             </a>
@@ -91,6 +91,10 @@
                 </div>
             </div>
         </div>
+
+        <script class="js-custom">
+            document.getElementById('username').innerText = '@' + window.user.name;
+        </script>
     </div>
     <nav class="bar bar-tab">
         <a class="tab-item" href="index.html" data-transition="slide-out">
