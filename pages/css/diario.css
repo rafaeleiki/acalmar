@@ -63,7 +63,7 @@ h4 {
     outline: none;
     font-size: 18pt;
     border: none;
-    background-color: inherit;
+    background-color: transparent;
     padding: inherit;
 }
 
@@ -94,7 +94,6 @@ h4 {
 
 .text-box textarea {
     outline: none;
-    border: none;
     flex: 0.8;
 }
 
@@ -134,10 +133,14 @@ textarea.no-resize {
 
 #mood-picker {
     position: absolute;
-    bottom: 75px;
+    bottom: 66px;
     display: flex;
     width: 40%;
     justify-content: space-around;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 3%;
+    border: 1px solid #999;
 }
 
 #mood-picker.hidden {

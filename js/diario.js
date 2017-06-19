@@ -47,7 +47,6 @@ var moodPicker = false;
         $(".humor.icon").removeClass("fa-meh-o");
         $(".humor.icon").removeClass("fa-frown-o");
         $(".humor.icon").addClass("fa-" + newMood + "-o");
-        toggleMoodPicker();
     }
 
     postaDiario = function() {
@@ -87,5 +86,9 @@ var moodPicker = false;
         } else {
             $("#mood-picker").addClass("hidden");
         }
+
+         $("button.humor").blur(function() {
+            setTimeout(toggleMoodPicker, 100);
+        });
     }
 })();
