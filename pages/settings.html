@@ -33,45 +33,50 @@
 
 <body>
 
-<header class="bar bar-nav navGradientCustom">
-    <a class="icon icon-left-nav pull-left" href="#" onclick="history.back();"></a>
-    <h1 class="title acalmarTitle">Configurações</h1>
-</header>
-<div id="master-layout" class="content content-padded">
-    <button class="btn btn-block" onclick="logout()">Desconectar</button>
+    <header class="bar bar-nav navGradientCustom">
+        <a class="icon icon-left-nav pull-left" href="#" onclick="history.back();"></a>
+        <h1 class="title acalmarTitle">Configurações</h1>
+    </header>
+    <div id="master-layout" class="content content-padded">
+        <button class="btn btn-block" onclick="logout()">Desconectar</button>
 
-    <script class="js-custom">
-        window.logout = function () {
-            window.localStorage.removeItem('user-name');
-            delete window.user;
-            PUSH({ url: 'pages/login.html' });
-        }
-    </script>
-</div>
-<div>
-    <nav class="bar bar-tab">
-        <a class="tab-item" href="index.html" data-transition="slide-out">
-            <span class="fa fa-handshake-o"></span>
-            <span class="tab-label">Amparo</span>
-        </a>
-        <a class="tab-item" href="pages/diario.html" data-transition="slide-out">
-            <span class="fa fa-pencil"></span>
-            <span class="tab-label">Diário</span>
-        </a>
-        <a class="tab-item active">
-            <span class="fa fa-leaf"></span>
-            <span class="tab-label">Acalmar</span>
-        </a>
-        <a class="tab-item" href="pages/assistencia.html" data-transition="slide-in">
-            <span class="fa fa-user-md"></span>
-            <span class="tab-label">Assistência</span>
-        </a>
-    </nav>
-</div>
+        <script class="js-custom">
+            window.logout = function() {
+                window.localStorage.removeItem('user-name');
+                delete window.user;
+                PUSH({
+                    url: 'pages/login.html'
+                });
+            }
+        </script>
+    </div>
+    <div>
+        <nav class="bar bar-tab">
+            <a class="tab-item" href="index.html" data-transition="slide-out">
+                <span class="fa fa-handshake-o"></span>
+                <span class="tab-label">Amparo</span>
+            </a>
+            <a class="tab-item" href="pages/diario.html" data-transition="slide-out">
+                <span class="fa fa-pencil"></span>
+                <span class="tab-label">Diário</span>
+            </a>
+            <a class="tab-item active">
+                <span class="fa fa-leaf"></span>
+                <span class="tab-label">Acalmar</span>
+            </a>
+            <a class="tab-item" href="pages/assistencia.html" data-transition="slide-in">
+                <span class="fa fa-user-md"></span>
+                <span class="tab-label">Assistência</span>
+            </a>
+        </nav>
+    </div>
 
 </body>
 
 <script src="js/notification.js"></script>
 <script src="js/ratchet-base.js"></script>
+<script class="js-custom">
+    loadCss();
+</script>
 
 </html>
